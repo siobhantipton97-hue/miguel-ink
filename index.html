@@ -13,97 +13,65 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #000;
       text-align: center;
     }
 
-    header {
-      padding: 60px 20px;
+    .site-header {
+      padding: 50px 20px;
     }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-
-    section {
-      padding: 60px 20px;
-    }
-
-    form {
-      max-width: 400px;
-      margin: auto;
-    }
-
-    input, textarea {
+    .logo {
+      max-width: 420px;
       width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: none;
+      height: auto;
+    }
+
+    .hero {
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .hero span {
+      color: #e10600; /* strong red accent */
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 35px;
+      background-color: #e10600;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
       font-size: 16px;
+      transition: 0.3s ease;
     }
 
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #fff;
-      color: #000;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #ccc;
-    }
-
-    footer {
-      padding: 30px;
-      font-size: 14px;
-      opacity: 0.7;
+    .cta-button:hover {
+      background-color: #000;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Miguel Ink</h1>
-    <p>Custom Tattoo Art</p>
+  <header class="site-header">
+    <img src="file_000000009af8720698284795f6c0d4e1.png" alt="Miguel Ink Logo" class="logo">
   </header>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Book your next tattoo session below.</p>
-
-    <!-- FORM START -->
-    <form action="https://formspree.io/forms/mbdagyjw" method="POST">
-
-      <!-- Redirect after successful submit -->
-      <input type="hidden" name="_next" value="https://siobhantipton97-hue.github.io/miguel-ink/thankyou.html">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-
-      <input type="email" name="email" placeholder="Your Email" required>
-
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send Message</button>
-
-    </form>
-    <!-- FORM END -->
-
+  <section class="hero">
+    <h1>MIGUEL <span>INK</span></h1>
+    <p>Bold. Clean. Professional Tattoo Work.</p>
+    <a href="#contact" class="cta-button">BOOK NOW</a>
   </section>
-
-  <footer>
-    © 2026 Miguel Ink. All rights reserved.
-  </footer>
 
 </body>
 </html>
