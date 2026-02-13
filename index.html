@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miguel Ink | Tattoo Studio Chiang Mai</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+<title>Miguel Ink</title>
 
 <style>
 
@@ -17,208 +15,101 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: black;
   overflow-x: hidden;
 }
 
-/* NAV */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 35px 8%;
-  font-weight: 600;
-  border-bottom: 3px solid #000;
-}
-
-.logo {
-  height: 80px;
-  width: auto;
-}
-
-nav a {
-  text-decoration: none;
-  color: #111;
-  margin-left: 30px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #8B0000;
-}
-
-/* HERO WITH SLIDESHOW */
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 0 8%;
+  padding-left: 8%;
+  overflow: hidden;
 }
 
-/* Slideshow */
+/* SLIDESHOW BACKGROUND */
 .slideshow {
   position: absolute;
   top: 0;
   left: 0;
+  width: 200%;
   height: 100%;
-  width: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.slide-track {
   display: flex;
-  width: calc(400px * 60);
-  animation: scroll 90s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
-.slide-track img {
+.slideshow img {
   width: 400px;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
-  filter: brightness(40%);
+  opacity: 0.15;
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* Hero content above slideshow */
+/* HERO CONTENT */
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 600px;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 30px;
 }
 
 .hero h1 {
-  font-size: 90px;
+  font-size: 80px;
   font-weight: 900;
-  line-height: 0.95;
-  text-transform: uppercase;
+  line-height: 0.9;
 }
 
-.hero span {
-  color: #8B0000;
+.hero h1 span {
+  color: red;
 }
 
 .hero p {
-  margin-top: 30px;
-  font-size: 20px;
-  max-width: 600px;
+  margin-top: 20px;
+  font-size: 18px;
+  max-width: 500px;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 40px;
-  padding: 16px 38px;
-  border: 3px solid #000;
+  margin-top: 30px;
+  padding: 14px 30px;
+  border: 2px solid black;
   text-decoration: none;
-  color: #111;
-  font-weight: 600;
+  font-weight: bold;
+  color: black;
   transition: 0.3s;
-  background: transparent;
-  cursor: pointer;
 }
 
 .btn:hover {
-  background: #8B0000;
-  color: #fff;
-  border-color: #8B0000;
+  background: red;
+  color: white;
+  border-color: red;
 }
 
-/* SECTIONS */
-.section {
-  padding: 120px 8%;
-  border-top: 3px solid #000;
-  background: #fff;
+/* SECTION */
+section {
+  padding: 80px 10%;
+  text-align: center;
 }
 
-.section h2 {
-  font-size: 55px;
-  font-weight: 900;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  border: 3px solid #000;
-  padding: 70px 35px;
-  font-weight: 600;
-  transition: 0.3s;
-  background: #fff;
-}
-
-.card:hover {
-  border-color: #8B0000;
-  transform: translateY(-6px);
-}
-
-/* ABOUT */
-.about-text {
-  max-width: 700px;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-/* CONTACT */
-.contact-form {
-  max-width: 650px;
-}
-
-.form-group {
-  margin-bottom: 30px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 16px;
-  border: 3px solid #000;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  outline: none;
-  transition: 0.3s;
-}
-
-input:focus, textarea:focus {
-  border-color: #8B0000;
-}
-
-/* FOOTER */
 footer {
-  padding: 50px 8%;
-  border-top: 3px solid #000;
-  font-size: 14px;
-}
-
-footer span {
-  color: #8B0000;
-}
-
-/* MOBILE */
-@media(max-width: 768px) {
-  .hero h1 { font-size: 55px; }
-  .section h2 { font-size: 38px; }
-  .logo { height: 55px; }
-  .slide-track img { width: 300px; }
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 </style>
@@ -226,111 +117,79 @@ footer span {
 
 <body>
 
-<nav>
-  <img src="file_000000009af8720698284795f6c0d4e1" alt="Miguel Ink Logo" class="logo">
-  <div>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Book</a>
-  </div>
-</nav>
-
 <section class="hero">
 
-  <!-- Slideshow Background -->
- <div class="slideshow">
-  <div class="slide-track">
-    <img src="./images/tattoo1.jpg" alt="">
-    <img src="./images/tattoo2.jpg" alt="">
-    <img src="./images/tattoo3.jpg" alt="">
-    <img src="./images/tattoo4.jpg" alt="">
-    <img src="./images/tattoo5.jpg" alt="">
-    <img src="./images/tattoo6.jpg" alt="">
-    <img src="./images/tattoo7.jpg" alt="">
-    <img src="./images/tattoo8.jpg" alt="">
-  </div>
-      </script>
+  <!-- SLIDESHOW -->
+  <div class="slideshow">
+    <!-- First Set -->
+    <img src="./images/tattoo1.jpg">
+    <img src="./images/tattoo2.jpg">
+    <img src="./images/tattoo3.jpg">
+    <img src="./images/tattoo4.jpg">
+    <img src="./images/tattoo5.jpg">
+    <img src="./images/tattoo6.jpg">
+    <img src="./images/tattoo7.jpg">
+    <img src="./images/tattoo8.jpg">
+    <img src="./images/tattoo9.jpg">
+    <img src="./images/tattoo10.jpg">
+    <img src="./images/tattoo11.jpg">
+    <img src="./images/tattoo12.jpg">
+    <img src="./images/tattoo13.jpg">
+    <img src="./images/tattoo14.jpg">
+    <img src="./images/tattoo15.jpg">
+    <img src="./images/tattoo16.jpg">
+    <img src="./images/tattoo17.jpg">
+    <img src="./images/tattoo18.jpg">
+    <img src="./images/tattoo19.jpg">
+    <img src="./images/tattoo20.jpg">
+    <img src="./images/tattoo21.jpg">
+    <img src="./images/tattoo22.jpg">
+    <img src="./images/tattoo23.jpg">
+    <img src="./images/tattoo24.jpg">
+    <img src="./images/tattoo25.jpg">
+    <img src="./images/tattoo26.jpg">
+    <img src="./images/tattoo27.jpg">
+    <img src="./images/tattoo28.jpg">
+    <img src="./images/tattoo29.jpg">
+    <img src="./images/tattoo30.jpg">
 
-    </div>
+    <!-- Duplicate for seamless scroll -->
+    <img src="./images/tattoo1.jpg">
+    <img src="./images/tattoo2.jpg">
+    <img src="./images/tattoo3.jpg">
+    <img src="./images/tattoo4.jpg">
+    <img src="./images/tattoo5.jpg">
+    <img src="./images/tattoo6.jpg">
   </div>
 
-  <!-- Hero Text -->
+  <!-- HERO TEXT -->
   <div class="hero-content">
-    <h1>Bold.<br>Clean.<br><span>Permanent.</span></h1>
-    <p>Custom blackwork and fine line tattoos in Chiang Mai. Precision. Detail. No compromises.</p>
-    <a href="#contact" class="btn">Book Appointment</a>
+    <img src="./images/logo.png" alt="Miguel Ink Logo" class="logo">
+
+    <h1>
+      BOLD.<br>
+      CLEAN.<br>
+      <span>PERMANENT.</span>
+    </h1>
+
+    <p>
+      Custom blackwork and fine line tattoos in Chiang Mai.
+      Precision. Detail. No compromises.
+    </p>
+
+    <a href="mailto:your@email.com" class="btn">Book Appointment</a>
   </div>
 
 </section>
 
-<section class="section" id="work">
-  <h2>Selected Work</h2>
-  <div class="grid">
-    <div class="card">Fine Line</div>
-    <div class="card">Blackwork</div>
-    <div class="card">Custom Designs</div>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <h2>About</h2>
-  <p class="about-text">
-    Independent tattoo artist based in Chiang Mai focused on precision line work, bold compositions, and timeless designs. Every piece is custom designed to fit the body and built to last.
-  </p>
-</section>
-
-<section class="section" id="contact">
-  <h2>Contact</h2>
-
-  <form class="contact-form"
-        action="https://formspree.io/f/mbdagyjw"
-        method="POST"
-        onsubmit="return redirectAfterSubmit(event)">
-
-    <div class="form-group">
-      <label>Name</label>
-      <input type="text" name="name" required>
-    </div>
-
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" name="email" required>
-    </div>
-
-    <div class="form-group">
-      <label>Message</label>
-      <textarea name="message" rows="5" required></textarea>
-    </div>
-
-    <button type="submit" class="btn">Send Message</button>
-
-  </form>
+<section>
+  <h2>About Miguel Ink</h2>
+  <p>Professional tattoo artistry focused on bold composition, clean execution, and timeless design.</p>
 </section>
 
 <footer>
-  © 2026 Miguel Ink — <span>Chiang Mai, Thailand</span>
+  © 2026 Miguel Ink. All Rights Reserved.
 </footer>
-
-<script>
-function redirectAfterSubmit(event) {
-  event.preventDefault();
-  const form = event.target;
-
-  fetch(form.action, {
-    method: form.method,
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      window.location.href = "thankyou.html";
-    } else {
-      alert("There was a problem submitting the form.");
-    }
-  });
-
-  return false;
-}
-</script>
 
 </body>
 </html>
