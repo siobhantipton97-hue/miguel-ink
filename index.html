@@ -38,7 +38,7 @@ nav {
 }
 
 nav img {
-  height: 70px;
+  height: 80px;
 }
 
 nav ul {
@@ -83,7 +83,7 @@ nav ul li a:hover {
 
 .hero button {
   margin-top: 30px;
-  padding: 12px 28px;
+  padding: 14px 30px;
   background: #000;
   color: #fff;
   border: none;
@@ -112,7 +112,7 @@ nav ul li a:hover {
 .slideshow img {
   width: 100%;
   object-fit: cover;
-  opacity: 0.08; /* Softer opacity */
+  opacity: 0.08;
 }
 
 @keyframes scroll {
@@ -130,7 +130,7 @@ h2 {
   margin-bottom: 40px;
 }
 
-/* WORK CARDS */
+/* WORK GRID */
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -150,6 +150,40 @@ h2 {
   transform: translateY(-5px);
 }
 
+/* BOOKING FORM */
+.booking-box {
+  max-width: 600px;
+  border: 1px solid #eee;
+  padding: 40px;
+}
+
+.booking-box input,
+.booking-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.booking-box textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.booking-box button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.booking-box button:hover {
+  background: #cc0000;
+}
+
 /* MOBILE */
 @media(max-width: 768px) {
   .hero {
@@ -158,7 +192,6 @@ h2 {
 
   .hero h1 {
     font-size: 55px;
-    line-height: 1;
   }
 
   nav ul {
@@ -186,14 +219,28 @@ h2 {
     <img src="images/tattoo1.jpg">
     <img src="images/tattoo2.jpg">
     <img src="images/tattoo3.jpg">
+    <img src="images/tattoo4.jpg">
+    <img src="images/tattoo5.jpg">
+    <img src="images/tattoo6.jpg">
+    <img src="images/tattoo7.jpg">
+    <img src="images/tattoo8.jpg">
+    <img src="images/tattoo9.jpg">
+    <img src="images/tattoo10.jpg">
     <img src="images/tattoo1.jpg">
     <img src="images/tattoo2.jpg">
     <img src="images/tattoo3.jpg">
+    <img src="images/tattoo4.jpg">
+    <img src="images/tattoo5.jpg">
+    <img src="images/tattoo6.jpg">
+    <img src="images/tattoo7.jpg">
+    <img src="images/tattoo8.jpg">
+    <img src="images/tattoo9.jpg">
+    <img src="images/tattoo10.jpg">
   </div>
 
   <h1>Bold. Clean. <span>Permanent.</span></h1>
   <p>Custom tattoos crafted with precision and intention.</p>
-  <button>BOOK APPOINTMENT</button>
+  <button onclick="document.getElementById('book').scrollIntoView()">BOOK APPOINTMENT</button>
 </div>
 
 <!-- WORK -->
@@ -215,7 +262,16 @@ h2 {
 <!-- BOOK -->
 <section id="book">
   <h2>Book an Appointment</h2>
-  <p>Contact via Instagram or email to schedule your session.</p>
+
+  <div class="booking-box">
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Tattoo Idea / Placement">
+      <textarea placeholder="Describe your idea"></textarea>
+      <button type="submit">Submit Booking Request</button>
+    </form>
+  </div>
 </section>
 
 </body>
