@@ -208,7 +208,45 @@ h2 {
   nav img { height: 75px; }
   nav ul { gap: 20px; }
 }
+.floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
 
+.floating-contact a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* WhatsApp Style */
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+/* LINE Style */
+.line-btn {
+  background-color: #06C755;
+}
+
+.line-btn:hover {
+  background-color: #05a647;
+}
 </style>
 </head>
 <body>
@@ -416,6 +454,19 @@ mobileInput.addEventListener("input", function(e) {
   e.target.value = prefix + formatted;
 });
 </script>
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="floating-contact">
+  
+  <!-- WhatsApp -->
+  <a href="https://wa.me/YOURNUMBER" target="_blank" class="whatsapp-btn">
+    WhatsApp
+  </a>
 
+  <!-- LINE -->
+  <a href="YOUR_LINE_LINK" target="_blank" class="line-btn">
+    LINE
+  </a>
+
+</div>
 </body>
 </html>
