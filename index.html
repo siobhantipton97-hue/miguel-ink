@@ -288,7 +288,9 @@ h2 {
   const form = document.getElementById("booking-form");
   const message = document.getElementById("form-message");
   const button = form.querySelector("button");
+  const mobileInput = document.getElementById("mobile");
 
+  /* FORM SUBMISSION */
   form.addEventListener("submit", async function(event) {
     event.preventDefault();
 
@@ -324,33 +326,30 @@ h2 {
       button.disabled = false;
       button.innerText = "Submit Booking Request";
     }
-    /* AUTO FORMAT MOBILE NUMBER */
-const mobileInput = document.getElementById("mobile");
+  });
 
-mobileInput.addEventListener("input", function(e) {
-  let value = e.target.value.replace(/[^\d+]/g, "");
+  /* AUTO FORMAT MOBILE NUMBER */
+  mobileInput.addEventListener("input", function(e) {
+    let value = e.target.value.replace(/[^\d+]/g, "");
 
-  // Keep + only at start
-  if (value.indexOf("+") > 0) {
-    value = value.replace(/\+/g, "");
-  }
+    if (value.indexOf("+") > 0) {
+      value = value.replace(/\+/g, "");
+    }
 
-  // Thailand format example
-  if (value.startsWith("+66")) {
-    value = value.replace("+66", "");
-    value = value.substring(0, 9);
-    value = value.replace(/(\d{2})(\d{3})(\d{0,4})/, function(_, a, b, c) {
-      return "+66 " + a + (b ? " " + b : "") + (c ? " " + c : "");
-    });
-  } else {
-    value = value.substring(0, 10);
-    value = value.replace(/(\d{3})(\d{3})(\d{0,4})/, function(_, a, b, c) {
-      return a + (b ? " " + b : "") + (c ? " " + c : "");
-    });
-  }
+    if (value.startsWith("+66")) {
+      value = value.replace("+66", "");
+      value = value.substring(0, 9);
+      value = value.replace(/(\d{2})(\d{3})(\d{0,4})/, function(_, a, b, c) {
+        return "+66 " + a + (b ? " " + b : "") + (c ? " " + c : "");
+      });
+    } else {
+      value = value.substring(0, 10);
+      value = value.replace(/(\d{3})(\d{3})(\d{0,4})/, function(_, a, b, c) {
+        return a + (b ? " " + b : "") + (c ? " " + c : "");
+      });
+    }
 
-  e.target.value = value;
-});
+    e.target.value = value;
   });
 </script>
 
