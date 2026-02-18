@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <!-- Google Analytics -->
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1C4741DCZ"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -17,28 +18,201 @@ gtag('config', 'G-L1C4741DCZ');
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
-/* PASTE ALL YOUR CSS HERE */
-/* START FROM: */
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* and include EVERYTHING down to your last media query */
+/* =========================
+   GLOBAL
+========================= */
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ff0000;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+  position: sticky;
+  top: 0;
+  background: #000;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #111;
+  z-index: 1000;
+}
+
+nav img {
+  height: 95px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  padding: 160px 8%;
+  border-bottom: 1px solid #111;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 90px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 18px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 40px;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff0000;
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+  padding: 120px 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  border: 1px solid #111;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+  border: 1px solid #ff0000;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 120px 8%;
+  border-bottom: 1px solid #111;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about p {
+  max-width: 800px;
+  color: #bbb;
+}
+
+/* =========================
+   BOOKING SECTION
+========================= */
+.book {
+  text-align: center;
+}
+
+.book p {
+  color: #bbb;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 50px 8%;
+  border-top: 1px solid #111;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+}
 </style>
 
 </head>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-L1C4741DCZ');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miguel Art Tattoo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
-
-</style>
-</head>
 <body>
 
 <nav>
@@ -62,16 +236,6 @@ gtag('config', 'G-L1C4741DCZ');
     <img src="images/tattoo8.jpg">
     <img src="images/tattoo9.jpg">
     <img src="images/tattoo10.jpg">
-    <img src="images/tattoo1.jpg">
-    <img src="images/tattoo2.jpg">
-    <img src="images/tattoo3.jpg">
-    <img src="images/tattoo4.jpg">
-    <img src="images/tattoo5.jpg">
-    <img src="images/tattoo6.jpg">
-    <img src="images/tattoo7.jpg">
-    <img src="images/tattoo8.jpg">
-    <img src="images/tattoo9.jpg">
-    <img src="images/tattoo10.jpg">
   </div>
 
   <h1>Bold. Clean. <span>Permanent.</span></h1>
@@ -79,70 +243,64 @@ gtag('config', 'G-L1C4741DCZ');
   <button onclick="document.getElementById('book').scrollIntoView()">BOOK APPOINTMENT</button>
 </div>
 
-<section class="work-section">
-    <div class="work-grid">
+<section id="work" class="work-section">
+  <div class="work-grid">
 
-        <!-- Minimalist -->
-        <div class="work-box">
-           <a href="minimalist.html">
-                <img src="images/minimalist.jpeg" alt="Minimalist Tattoo">
-                <h3>Minimalist</h3>
-            </a>
-        </div>
-
-        <!-- Custom -->
-        <div class="work-box">
-            <a href="custom.html">
-                <img src="images/custom.jpeg" alt="Custom Tattoo">
-                <h3>Custom</h3>
-            </a>
-        </div>
-
-        <!-- Spiritual -->
-        <div class="work-box">
-            <a href="spiritual.html">
-                <img src="images/spiritual.jpg" alt="Spiritual Tattoo">
-                <h3>Spiritual</h3>
-            </a>
-        </div>
-
-        <!-- Realism -->
-        <div class="work-box">
-            <a href="realism.html">
-                <img src="images/realism.jpg" alt="Realism Tattoo">
-                <h3>Realism</h3>
-            </a>
-        </div>
-
+    <div class="work-box">
+      <a href="minimalist.html">
+        <img src="images/minimalist.jpeg" alt="Minimalist Tattoo">
+        <h3>Minimalist</h3>
+      </a>
     </div>
+
+    <div class="work-box">
+      <a href="custom.html">
+        <img src="images/custom.jpeg" alt="Custom Tattoo">
+        <h3>Custom</h3>
+      </a>
+    </div>
+
+    <div class="work-box">
+      <a href="spiritual.html">
+        <img src="images/spiritual.jpg" alt="Spiritual Tattoo">
+        <h3>Spiritual</h3>
+      </a>
+    </div>
+
+    <div class="work-box">
+      <a href="realism.html">
+        <img src="images/realism.jpg" alt="Realism Tattoo">
+        <h3>Realism</h3>
+      </a>
+    </div>
+
+  </div>
 </section>
 
 <section id="about">
   <h2>About</h2>
 
   <p>
-    Located near Anusarn Market in Chiang Mai, Thailand, Miguel Art Tattoo is a professional studio welcoming both local clients and international visitors. 
+    Located near Anusarn Market in Chiang Mai, Thailand, Miguel Art Tattoo is a professional studio welcoming both local clients and international visitors.
     The studio specialises in clean, detailed tattoo work with a strong focus on precision and long-lasting quality.
   </p>
 
   <p>
-    From fine line and blackwork to fully custom designs, each piece is developed through careful consultation to ensure balance, placement, and meaning. 
+    From fine line and blackwork to fully custom designs, each piece is developed through careful consultation to ensure balance, placement, and meaning.
     Every tattoo is crafted to be bold, clear, and built to age well.
   </p>
 
   <p>
-    Walk-ins are welcome, and appointments are available for larger or custom projects. 
+    Walk-ins are welcome, and appointments are available for larger or custom projects.
     Strict hygiene standards and a professional studio environment ensure every client feels confident and comfortable from start to finish.
   </p>
-  Visiting Chiang Mai? Stop by for a consultation or message ahead to secure your booking.
-</p>
 </section>
-  <section id="location">
+
+<section id="location">
   <h2>Location</h2>
 
   <p>
-    Located near Anusarn Market in Chiang Mai, Thailand. 
-    Easy access for both locals and international visitors.
+    Located near Anusarn Market in Chiang Mai, Thailand.
   </p>
 
   <div style="margin-top:40px;">
@@ -151,104 +309,107 @@ gtag('config', 'G-L1C4741DCZ');
       width="100%" 
       height="350" 
       style="border:0;" 
-      allowfullscreen="" 
+      allowfullscreen 
       loading="lazy">
     </iframe>
+
     <div style="margin-top:30px;">
-  <a 
-    href="https://www.google.com/maps/dir/?api=1&destination=18.7827,99.0014" 
-    target="_blank"
-    style="
-      display:inline-block;
-      background:#ff0000;
-      color:#fff;
-      padding:14px 28px;
-      text-decoration:none;
-      font-weight:bold;
-      letter-spacing:1px;
-      transition:0.3s;
-    "
-    onmouseover="this.style.background='#b30000'"
-    onmouseout="this.style.background='#ff0000'"
-  >
-    GET DIRECTIONS
-  </a>
-</div>
+      <a 
+        href="https://www.google.com/maps/dir/?api=1&destination=18.7827,99.0014" 
+        target="_blank"
+        style="display:inline-block;background:#ff0000;color:#fff;padding:14px 28px;text-decoration:none;font-weight:bold;letter-spacing:1px;transition:0.3s;"
+      >
+        GET DIRECTIONS
+      </a>
+    </div>
   </div>
 </section>
+
 <section id="book">
   <h2>Book an Appointment</h2>
+
   <div class="booking-box">
     <form id="booking-form" action="https://formspree.io/f/mbdagyjw" method="POST">
-  <input type="text" name="full_name" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email Address" required>
-   <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
-  <input type="text" name="idea" placeholder="Tattoo Idea / Placement">
-  <textarea name="description" placeholder="Describe your idea"></textarea>
-  <button type="submit">Submit Booking Request</button>
-</form>
+      <input type="text" name="full_name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+      <input type="text" name="idea" placeholder="Tattoo Idea / Placement">
+      <textarea name="description" placeholder="Describe your idea"></textarea>
+      <button type="submit">Submit Booking Request</button>
+    </form>
 
-    <!-- Updated Success Message -->
     <p id="form-message" style="margin-top:20px; display:none; color:#ff0000; font-weight:bold; opacity:0;">
       Thank you. Your booking request has been sent. We will contact you soon.
     </p>
   </div>
 </section>
 
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="floating-contact">
+
+  <a href="https://wa.me/YOURNUMBER"
+     target="_blank"
+     class="whatsapp-btn"
+     onclick="trackContact('whatsapp')">
+     WhatsApp
+  </a>
+
+  <a href="YOUR_LINE_LINK"
+     target="_blank"
+     class="line-btn"
+     onclick="trackContact('line')">
+     LINE
+  </a>
+
+</div>
+
 <script>
-  const form = document.getElementById("booking-form");
-  const message = document.getElementById("form-message");
-  const button = form.querySelector("button");
-  const mobileInput = document.getElementById("mobile");
+const form = document.getElementById("booking-form");
+const message = document.getElementById("form-message");
+const button = form.querySelector("button");
+const mobileInput = document.getElementById("mobile");
 
-  /* FORM SUBMISSION */
-  form.addEventListener("submit", async function(event) {
-    event.preventDefault();
+/* FORM SUBMISSION */
+form.addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-    button.disabled = true;
-    button.innerText = "Sending...";
+  button.disabled = true;
+  button.innerText = "Sending...";
 
-    const data = new FormData(form);
+  const data = new FormData(form);
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
 
-      if (response.ok) {
-        form.reset();
+    if (response.ok) {
+      form.reset();
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.transition = "opacity 0.6s ease";
+        message.style.opacity = "1";
+      }, 10);
 
-        message.style.display = "block";
-        setTimeout(() => {
-          message.style.transition = "opacity 0.6s ease";
-          message.style.opacity = "1";
-        }, 10);
-
-        button.innerText = "Sent ✓";
-      } else {
-        alert("There was a problem submitting the form.");
-        button.disabled = false;
-        button.innerText = "Submit Booking Request";
-      }
-    } catch (error) {
-      alert("Network error. Please try again.");
+      button.innerText = "Sent ✓";
+    } else {
+      alert("There was a problem submitting the form.");
       button.disabled = false;
       button.innerText = "Submit Booking Request";
     }
-  });
+  } catch (error) {
+    alert("Network error. Please try again.");
+    button.disabled = false;
+    button.innerText = "Submit Booking Request";
+  }
+});
 
- /* AUTO FORMAT MOBILE NUMBER - INTERNATIONAL */
-const mobileInput = document.getElementById("mobile");
-
+/* MOBILE FORMAT */
 mobileInput.addEventListener("input", function(e) {
-  let value = e.target.value;
+  let value = e.target.value.replace(/[^\d+]/g, "");
 
-  // Remove everything except digits and +
-  value = value.replace(/[^\d+]/g, "");
-
-  // Allow + only at the start
   if (value.indexOf("+") > 0) {
     value = value.replace(/\+/g, "");
   }
@@ -259,39 +420,14 @@ mobileInput.addEventListener("input", function(e) {
     value = value.substring(1);
   }
 
-  // Limit to 15 digits (international max standard)
   value = value.substring(0, 15);
 
-  // Group digits in blocks of 3–4 for readability
   let formatted = value.match(/.{1,4}/g);
-  if (formatted) {
-    formatted = formatted.join(" ");
-  } else {
-    formatted = value;
-  }
+  formatted = formatted ? formatted.join(" ") : value;
 
   e.target.value = prefix + formatted;
 });
-</script>
-<!-- FLOATING CONTACT BUTTONS -->
-<div class="floating-contact">
-  
-  <!-- WhatsApp -->
- <a href="https://wa.me/YOURNUMBER"
-   target="_blank"
-   class="whatsapp-btn"
-   onclick="trackContact('whatsapp')">
-   WhatsApp
-</a>
 
-  <!-- LINE -->
-  <a href="YOUR_LINE_LINK"
-   target="_blank"
-   class="line-btn"
-   onclick="trackContact('line')">
-   LINE
-</a>
-    <script>
 function trackContact(platform) {
   if (typeof gtag !== "undefined") {
     gtag('event', 'contact_click', {
@@ -302,6 +438,5 @@ function trackContact(platform) {
 }
 </script>
 
-</div>
 </body>
 </html>
