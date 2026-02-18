@@ -13,6 +13,7 @@ body {
   font-family: 'Cinzel', serif;
   background: #000;
   color: #fff;
+  padding-top: 85px; /* height of fixed nav */
 }
 
 /* ================= NAV ================= */
