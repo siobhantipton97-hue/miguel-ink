@@ -159,3 +159,10 @@ footer {
 .gallery-grid img:hover {
     transform: scale(1.05);
 }
+.page-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
