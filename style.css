@@ -243,3 +243,16 @@ footer {
   height: 700px;
   display: block;
 }
+/* TRUE EDGE-TO-EDGE MAP FIX */
+.map-full {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.map-full iframe {
+  width: 100%;
+  height: 700px;
+  display: block;
+}
