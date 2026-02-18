@@ -4,6 +4,329 @@
  <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1C4741DCZ"></script>
 <script>
+ <style>
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; background: #000; color: #fff; }
+
+/* NAVIGATION */
+nav {
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 1000;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #111;
+}
+
+nav img {
+  height: 95px;
+  filter: drop-shadow(0 0 12px rgba(255,0,0,0.6));
+  transition: 0.3s;
+}
+
+nav img:hover { filter: drop-shadow(0 0 18px rgba(255,0,0,0.9)); }
+
+nav ul { list-style: none; display: flex; gap: 40px; }
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover { color: #ff0000; }
+
+/* HERO */
+.hero {
+  position: relative;
+  padding: 150px 8%;
+  overflow: hidden;
+  border-bottom: 1px solid #111;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,0,0,0.25) 0%, rgba(0,0,0,0) 70%);
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Cinzel', serif;
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.hero h1 span { color: #ff0000; }
+
+.hero p {
+  position: relative;
+  z-index: 1;
+  margin-top: 25px;
+  font-size: 18px;
+  max-width: 500px;
+  color: #ccc;
+}
+
+.hero button {
+  position: relative;
+  z-index: 1;
+  margin-top: 35px;
+  padding: 16px 40px;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero button:hover { background: #b30000; }
+
+/* SLIDESHOW */
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  animation: scroll 40s linear infinite;
+  z-index: -1;
+}
+
+.slideshow img { width: 100%; object-fit: cover; opacity: 0.05; }
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* SECTIONS */
+section { padding: 130px 8%; border-bottom: 1px solid #111; }
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ff0000;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  border: 1px solid #111;
+  padding: 60px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  background: #0a0a0a;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #ff0000;
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(255,0,0,0.2);
+}
+
+/* ABOUT */
+#about p { max-width: 700px; color: #ccc; line-height: 1.7; }
+
+/* BOOKING FORM */
+.booking-box {
+  max-width: 600px;
+  border: 1px solid #111;
+  padding: 60px;
+  background: #0a0a0a;
+}
+
+.booking-box input,
+.booking-box textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 25px;
+  border: 1px solid #222;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
+
+.booking-box input:focus,
+.booking-box textarea:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+.booking-box textarea { resize: vertical; min-height: 120px; }
+
+.booking-box button {
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.booking-box button:hover { background: #b30000; }
+
+@media(max-width: 768px) {
+  .hero { padding: 100px 8%; }
+  .hero h1 { font-size: 55px; }
+  nav img { height: 75px; }
+  nav ul { gap: 20px; }
+}
+.floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-contact a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Floating Container */
+.floating-contact {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+/* Red Glow Buttons */
+.floating-contact a {
+  display: block;
+  padding: 14px 22px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+  background: #b30000;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #ff0000,
+              0 0 20px #ff0000,
+              0 0 40px rgba(255, 0, 0, 0.6);
+  animation: glowPulse 2s infinite alternate;
+}
+
+.floating-contact a:hover {
+  background: #ff0000;
+  box-shadow: 0 0 20px #ff0000,
+              0 0 40px #ff0000,
+              0 0 60px rgba(255, 0, 0, 0.9);
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 30px rgba(255, 0, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px #ff0000,
+                0 0 40px #ff0000,
+                0 0 60px rgba(255, 0, 0, 0.9);
+  }
+}
+ .work-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.work-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.work-box {
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.work-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.work-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
+
+.work-box:hover img {
+    transform: scale(1.05);
+}
+
+.work-box h3 {
+    margin-top: 10px;
+    color: white;
+}
+ @media (max-width: 768px) {
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+}
+<style>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
