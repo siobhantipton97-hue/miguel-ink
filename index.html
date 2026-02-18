@@ -297,10 +297,7 @@ h2 {
     color: inherit;
 }
 
-.work-box h3 {
-    margin-top: 10px;
-}
- .work-grid {
+.work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
@@ -310,6 +307,7 @@ h2 {
 
 .work-box {
     text-align: center;
+    transition: 0.3s ease;
 }
 
 .work-box img {
@@ -320,9 +318,16 @@ h2 {
     transition: transform 0.3s ease;
 }
 
+/* Hover Effects */
+.work-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
+
 .work-box:hover img {
     transform: scale(1.05);
 }
+
 .work-box h3 {
     margin-top: 10px;
     color: white;
