@@ -300,6 +300,34 @@ h2 {
 .work-box h3 {
     margin-top: 10px;
 }
+ .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.work-box {
+    text-align: center;
+}
+
+.work-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.work-box img:hover {
+    transform: scale(1.05);
+}
+
+.work-box h3 {
+    margin-top: 10px;
+    color: white;
+}
 </style>
 </head>
 <body>
@@ -342,36 +370,43 @@ h2 {
   <button onclick="document.getElementById('book').scrollIntoView()">BOOK APPOINTMENT</button>
 </div>
 
-<section id="work">
-  <h2>Selected Work</h2>
-  <div class="work-box">
-    <a href="images/minimalist.jpeg">
-        <img src="images/minimalist.jpeg" alt="Minimalist Tattoo">
-        <h3>Minimalist</h3>
-    </a>
-</div>
+<section class="work-section">
+    <div class="work-grid">
 
-<div class="work-box">
-    <a href="images/custom.jpeg">
-        <img src="images/custom.jpeg" alt="Custom Tattoo">
-        <h3>Custom</h3>
-    </a>
-</div>
+        <!-- Minimalist -->
+        <div class="work-box">
+            <a href="images/minimalist.jpeg">
+                <img src="images/minimalist.jpeg" alt="Minimalist Tattoo">
+                <h3>Minimalist</h3>
+            </a>
+        </div>
 
-<div class="work-box">
-    <a href="images/spiritual.jpg">
-        <img src="images/spiritual.jpg" alt="Spiritual Tattoo">
-        <h3>Spiritual</h3>
-    </a>
-</div>
+        <!-- Custom -->
+        <div class="work-box">
+            <a href="images/custom.jpeg">
+                <img src="images/custom.jpeg" alt="Custom Tattoo">
+                <h3>Custom</h3>
+            </a>
+        </div>
 
-<div class="work-box">
-    <a href="images/realism.jpg">
-        <img src="images/realism.jpg" alt="Realism Tattoo">
-        <h3>Realism</h3>
-    </a>
-</div>
- <section>
+        <!-- Spiritual -->
+        <div class="work-box">
+            <a href="images/spiritual.jpg">
+                <img src="images/spiritual.jpg" alt="Spiritual Tattoo">
+                <h3>Spiritual</h3>
+            </a>
+        </div>
+
+        <!-- Realism -->
+        <div class="work-box">
+            <a href="images/realism.jpg">
+                <img src="images/realism.jpg" alt="Realism Tattoo">
+                <h3>Realism</h3>
+            </a>
+        </div>
+
+    </div>
+</section>
 
 <section id="about">
   <h2>About</h2>
