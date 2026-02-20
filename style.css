@@ -320,3 +320,153 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* ================= GLOBAL RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #ff0000;
+}
+
+
+/* ================= PAGE SPACING ================= */
+/* Prevents content hiding under fixed navbar */
+
+.genre-hero,
+.page-header,
+.gallery-section {
+  padding: 160px 5% 80px;
+  background: #000;
+  text-align: center;
+}
+
+
+/* ================= TITLES ================= */
+
+h1 {
+  font-size: 48px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+
+/* ================= GALLERY GRID ================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ================= CATEGORY SQUARES ================= */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 120px 5%;
+}
+
+.category-box {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.category-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.category-box:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+}
+
+.category-box:hover img {
+  transform: scale(1.1);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .gallery-grid img {
+    height: 250px;
+  }
+}
