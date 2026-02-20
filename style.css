@@ -470,3 +470,23 @@ h2 {
     height: 250px;
   }
 }
+/* ================= LOGO SIZE FIX ================= */
+
+/* Default (inner pages) */
+.logo img {
+  height: 38px !important;
+  width: auto;
+}
+
+/* Slightly larger on homepage header */
+body#hero .logo img,
+section#hero .logo img {
+  height: 52px !important;
+}
+
+/* Optional: reduce on small screens */
+@media (max-width: 768px) {
+  .logo img {
+    height: 32px !important;
+  }
+}
