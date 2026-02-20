@@ -544,3 +544,36 @@ section#hero .logo img {
   color: #aaa;
   text-align: center;
 }
+/* ================= SOCIAL SECTION ================= */
+
+.social-section {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 1px solid #111;
+  background-color: #000; /* keeps it consistent with dark theme */
+}
+
+.social-section h3 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 12px 28px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Optional stronger hover effect */
+.social-btn:hover {
+  transform: translateY(-2px);
+}
