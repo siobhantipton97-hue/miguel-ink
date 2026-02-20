@@ -533,3 +533,14 @@ section#hero .logo img {
   color: #fff;
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
 }
+/* ================= PAGE DESCRIPTION ================= */
+
+.page-description {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #aaa;
+  text-align: center;
+}
